@@ -217,7 +217,7 @@ class File extends Translation implements DriverInterface
         $translations = [];
 
         if ($this->disk->exists($filePath)) {
-            return $this->disk->getRequire($filePath);
+            return array_dot($this->disk->getRequire($filePath));
         }
 
         return [];
