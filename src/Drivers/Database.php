@@ -103,7 +103,7 @@ class Database extends Translation implements DriverInterface
             $this->addLanguage($language);
         }
 
-        list($group, $key) = explode('.', $key);
+        list($group, $key) = explode('.', $key, 2);
 
         Language::where('language', $language)
             ->first()
